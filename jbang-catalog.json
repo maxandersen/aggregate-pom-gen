@@ -1,0 +1,9 @@
+{
+  "catalogs": {},
+  "aliases": {
+    "aggregate-pom-gen": {
+      "script-ref": "main.java"
+    }
+  },
+  "templates": {}
+}

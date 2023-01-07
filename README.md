@@ -6,16 +6,13 @@ A simple tool to generate an aggregate Maven POM file from independent projects 
 
 ```
 $ aggregate-pom-gen --help
+Usage: <main class> [--artifactId=<artifactId>] [--groupId=<groupId>]
+                    [--version=<version>]
 Generate an aggregate POM file for direct sub-folders
-
-Usage:
-  aggregate-pom-gen [flags]
-
-Flags:
-      --artifactId string   The artifactId (default "aggregator")
-      --groupId string      The groupId (default "org.acme")
-  -h, --help                help for aggregate-pom-gen
-      --version string      The version (default "999-SNAPSHOT")
+      --artifactId=<artifactId>
+                            The artifactId
+      --groupId=<groupId>   The groupId
+      --version=<version>   The version
 ```
 
 It will write a `pom.xml` file in the current folder, where each referenced module corresponds to a direct sub-folder with a `pom.xml` file.
@@ -23,7 +20,5 @@ It will write a `pom.xml` file in the current folder, where each referenced modu
 ## Installation
 
 ```
-go install github.com/jponge/aggregate-pom-gen
+jbang app install aggregate-pom-gen@maxandersen/aggregate-pom-gen
 ```
-
-...or get self-contained binaries from [the releases](https://github.com/jponge/aggregate-pom-gen/releases) 
